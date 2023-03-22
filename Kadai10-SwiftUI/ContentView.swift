@@ -12,13 +12,13 @@ struct ContentView: View {
 
     private let colors: [Color] = [Color.red, Color.green, Color.blue]
     init() {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.lightGray
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.lightGray
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
 
     var body: some View {
         NavigationView{
