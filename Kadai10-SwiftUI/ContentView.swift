@@ -23,14 +23,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List {
-                ForEach (0..<Int(prefecture.count)){ index in
+                ForEach(Array(prefecture.enumerated()), id: \.offset, content: { item in
                     HStack {
-                        Text(prefecture[index])
+                        Text(item.element)
                         Spacer()
-                        Text(String(index + 1) + "番目の都道府県です")
+                        Text(String(item.offset + 1) + "番目の都道府県です")
                     }
-                    .listRowBackground(colors[index % colors.count])
-                }
+                    .listRowBackground(colors[item.offset % colors.count])
+                })
             }
             .listStyle(.plain)
             .navigationTitle("都道府県")
